@@ -64,14 +64,14 @@ class BoxCarsDataset(object):
             
        
     #%%
-    %'train': [(0, 10), (1, 30), (2, 77),...] 
+    #'train': [(0, 10), (1, 30), (2, 77),...] 
     def initialize_data(self, part):
         assert self.split is not None, "load classification split first"
         assert part in self.X, "unknown part -- use: train, validation, test"
         assert self.X[part] is None, "part %s was already initialized"%part
         data = self.split[part]
         x, y = [], []
-        for vehicle_id, label in data:
+        for vehicle_id, label in data: #vehicle_id,对应samples中的第几辆车；label对应车型
             num_instances = len(self.dataset["samples"][vehicle_id]["instances"])
             x.extend([(vehicle_id, instance_id) for instance_id in range(num_instances)])
             y.extend([label]*num_instances)
