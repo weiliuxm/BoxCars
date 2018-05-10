@@ -79,7 +79,7 @@ class BoxCarsDataset(object):
         self.X[part] = np.asarray(x,dtype=int)
 
         y = np.asarray(y,dtype=int)
-        y_categorical = np.zeros((y.shape[0], self.get_number_of_classes()))
+        y_categorical = np.zeros((y.shape[0], self.get_number_of_classes()))   #总共107个子类
         y_categorical[np.arange(y.shape[0]), y] = 1
         self.Y[part] = y_categorical
         
