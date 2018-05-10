@@ -72,7 +72,7 @@ class BoxCarsDataset(object):
         data = self.split[part]
         x, y = [], []
         for vehicle_id, label in data: #vehicle_id,对应samples中的第几辆车；label对应车型
-            num_instances = len(self.dataset["samples"][vehicle_id]["instances"])
+            num_instances = len(self.dataset["samples"][vehicle_id]["instances"]) #vehicle_id对应的训练图像数量
             x.extend([(vehicle_id, instance_id) for instance_id in range(num_instances)])
             y.extend([label]*num_instances)
         self.X[part] = np.asarray(x,dtype=int)
