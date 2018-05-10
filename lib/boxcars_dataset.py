@@ -80,7 +80,7 @@ class BoxCarsDataset(object):
 
         y = np.asarray(y,dtype=int)
         y_categorical = np.zeros((y.shape[0], self.get_number_of_classes()))   #维度为（样本的数量，子类的数量）。hard数据集总共107个子类。
-        y_categorical[np.arange(y.shape[0]), y] = 1
+        y_categorical[np.arange(y.shape[0]), y] = 1   #每个sample对应的标签位置设为1。
         self.Y[part] = y_categorical
         
 
