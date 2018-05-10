@@ -64,6 +64,7 @@ class BoxCarsDataset(object):
             
        
     #%%
+    %'train': [(0, 10), (1, 30), (2, 77),...] 
     def initialize_data(self, part):
         assert self.split is not None, "load classification split first"
         assert part in self.X, "unknown part -- use: train, validation, test"
