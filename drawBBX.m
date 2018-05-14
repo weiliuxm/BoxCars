@@ -2,6 +2,8 @@ clear
 close all
 clc
 load dataset.mat
+
+
 root_path_images = 'D:\datasets\BoxCars116k\BoxCars116k\images\';
 
 id_sample = 1;
@@ -40,3 +42,11 @@ for i_instance = 1:num_instance
      line([bb3d_cropped(2,1),bb3d_cropped(6,1)],[bb3d_cropped(2,2),bb3d_cropped(6,2)],'Color',[1, 0.8431, 0],'LineWidth',2);
      line([bb3d_cropped(3,1),bb3d_cropped(7,1)],[bb3d_cropped(3,2),bb3d_cropped(7,2)],'Color',[1, 0.8431, 0],'LineWidth',2);
      line([bb3d_cropped(4,1),bb3d_cropped(8,1)],[bb3d_cropped(4,2),bb3d_cropped(8,2)],'Color',[1, 0.8431, 0],'LineWidth',2);
+     %% to obtain the center of 3d bounding box
+     [cx,cy] = polyxpoly([bb3d_cropped(1,1),bb3d_cropped(7,1)]', [bb3d_cropped(1,2), bb3d_cropped(7,2)]',...
+         [bb3d_cropped(4,1),bb3d_cropped(6,1)]',[bb3d_cropped(4,2), bb3d_cropped(6,2)]')
+     text(cx, cy,'o','color','r');
+     [cx2,cy2] = polyxpoly([bb3d_cropped(3,1),bb3d_cropped(5,1)]', [bb3d_cropped(3,2), bb3d_cropped(5,2)]',...
+     [bb3d_cropped(2,1),bb3d_cropped(8,1)]',[bb3d_cropped(2,2), bb3d_cropped(8,2)]')
+     text(cx2, cy2,'+','color','b');
+end
