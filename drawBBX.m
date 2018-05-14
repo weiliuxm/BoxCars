@@ -31,13 +31,12 @@ for i_instance = 1:num_instance
      line([bb3d_cropped(5,1),bb3d_cropped(6,1)],[bb3d_cropped(5,2),bb3d_cropped(6,2)],'Color','red','LineWidth',2);
      line([bb3d_cropped(7,1),bb3d_cropped(8,1)],[bb3d_cropped(7,2),bb3d_cropped(8,2)],'Color','red','LineWidth',2);
     %blue
-     line([bb3d_cropped(1,1),bb3d_cropped(4,1)],[bb3d_cropped(1,2),bb3d_cropped(4,2)],'Color','blue','LineWidth',2);
-     line([bb3d_cropped(2,1),bb3d_cropped(3,1)],[bb3d_cropped(2,2),bb3d_cropped(3,2)],'Color','blue','LineWidth',2);
-     line([bb3d_cropped(5,1),bb3d_cropped(8,1)],[bb3d_cropped(5,2),bb3d_cropped(8,2)],'Color','blue','LineWidth',2);
-     line([bb3d_cropped(6,1),bb3d_cropped(7,1)],[bb3d_cropped(6,2),bb3d_cropped(7,2)],'Color','blue','LineWidth',2);
+     line([bb3d_cropped(1,1),bb3d_cropped(4,1)],[bb3d_cropped(1,2),bb3d_cropped(4,2)],'Color',[0, 1, 1],'LineWidth',2);
+     line([bb3d_cropped(2,1),bb3d_cropped(3,1)],[bb3d_cropped(2,2),bb3d_cropped(3,2)],'Color',[0, 1, 1],'LineWidth',2);
+     line([bb3d_cropped(5,1),bb3d_cropped(8,1)],[bb3d_cropped(5,2),bb3d_cropped(8,2)],'Color',[0, 1, 1],'LineWidth',2);
+     line([bb3d_cropped(6,1),bb3d_cropped(7,1)],[bb3d_cropped(6,2),bb3d_cropped(7,2)],'Color',[0, 1, 1],'LineWidth',2);
     %yellow
-     line([bb3d_cropped(1,1),bb3d_cropped(5,1)],[bb3d_cropped(1,2),bb3d_cropped(5,2)],'Color','yellow','LineWidth',2);
-     line([bb3d_cropped(2,1),bb3d_cropped(6,1)],[bb3d_cropped(2,2),bb3d_cropped(6,2)],'Color','yellow','LineWidth',2);
-     line([bb3d_cropped(3,1),bb3d_cropped(7,1)],[bb3d_cropped(3,2),bb3d_cropped(7,2)],'Color','yellow','LineWidth',2);
-     line([bb3d_cropped(4,1),bb3d_cropped(8,1)],[bb3d_cropped(4,2),bb3d_cropped(8,2)],'Color','yellow','LineWidth',2);
-end
+     line([bb3d_cropped(1,1),bb3d_cropped(5,1)],[bb3d_cropped(1,2),bb3d_cropped(5,2)],'Color',[1, 0.8431, 0],'LineWidth',2);
+     line([bb3d_cropped(2,1),bb3d_cropped(6,1)],[bb3d_cropped(2,2),bb3d_cropped(6,2)],'Color',[1, 0.8431, 0],'LineWidth',2);
+     line([bb3d_cropped(3,1),bb3d_cropped(7,1)],[bb3d_cropped(3,2),bb3d_cropped(7,2)],'Color',[1, 0.8431, 0],'LineWidth',2);
+     line([bb3d_cropped(4,1),bb3d_cropped(8,1)],[bb3d_cropped(4,2),bb3d_cropped(8,2)],'Color',[1, 0.8431, 0],'LineWidth',2);
