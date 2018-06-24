@@ -88,15 +88,17 @@ class BoxCarsDataset(object):
     def get_number_of_classes(self):
         return len(self.split["types_mapping"])
         
-        
+    
+    #probabilities是个array，列的维度应该等于num_of_classes，行的维度等于样本个数
     def evaluate(self, probabilities, part="test", top_k=1):
         samples = self.X[part]
-        assert samples.shape[0] == probabilities.shape[0]
-        assert self.get_number_of_classes() == probabilities.shape[1]
+        assert samples.shape[0] == probabilities.shape[0]   
+        assert self.get_number_of_classes() == probabilities.shape[1]   
         part_data = self.split[part]
         probs_inds = {}
         for vehicle_id, _ in part_data:
             probs_inds[vehicle_id] = np.zeros(len(self.dataset["samples"][vehicle_id]["instances"]), dtype=int)
+        ##读入真值
         for i, (vehicle_id, instance_id) in enumerate(samples):
             probs_inds[vehicle_id][instance_id] = i
             
