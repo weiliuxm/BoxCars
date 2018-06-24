@@ -107,7 +107,7 @@ class BoxCarsDataset(object):
         hits_tracks = []
         for vehicle_id, label in part_data:
             inds = probs_inds[vehicle_id]
-            hits_tracks.append(get_hit(np.mean(probabilities[inds, :], axis=0), label))
+            hits_tracks.append(get_hit(np.mean(probabilities[inds, :], axis=0), label))#np.mean一个sample对应的多个instances的平均输出值
             for ind in inds:
                 hits.append(get_hit(probabilities[ind, :], label))
                 
