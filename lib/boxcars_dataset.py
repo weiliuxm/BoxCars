@@ -98,7 +98,7 @@ class BoxCarsDataset(object):
         probs_inds = {}
         for vehicle_id, _ in part_data:
             probs_inds[vehicle_id] = np.zeros(len(self.dataset["samples"][vehicle_id]["instances"]), dtype=int)
-        ##读入真值
+        ##给每个instance从0开始编号
         for i, (vehicle_id, instance_id) in enumerate(samples):
             probs_inds[vehicle_id][instance_id] = i
             
