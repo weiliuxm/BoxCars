@@ -96,6 +96,7 @@ if args.eval is None:
     saver_callback = ModelCheckpoint(os.path.join(args.snapshots_dir, "model_{epoch:03d}_{val_acc:.2f}.h5"), period=4 )
 
     #%% get initial epoch
+    #初始的epoch
     initial_epoch = 0
     if args.resume is not None:
         initial_epoch = int(os.path.basename(args.resume).split("_")[1]) + 1
